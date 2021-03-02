@@ -10,6 +10,7 @@
 mod_upload_ui <- function(id){
   ns <- NS(id)
   tagList(
+<<<<<<< HEAD
     bs4Dash::bs4Card(
       title = "Expression matrix Upload",
       width = NULL,
@@ -30,6 +31,9 @@ mod_upload_ui <- function(id){
       downloadLink(ns("grouplist.csv"),"example group file"),
       fileInput(ns("grouplist"), "Upload your file ONLY IN csv format", accept = ".csv")
     )
+=======
+
+>>>>>>> a136aa786d9f64649fd54793aa6bd8a1a61ded22
   )
 }
 
@@ -40,6 +44,7 @@ mod_upload_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
 
+<<<<<<< HEAD
     output$matrix <- downloadHandler(
       filename = 'GSE42872_series_matrix.txt.gz',
       content = function(file) {
@@ -55,6 +60,10 @@ mod_upload_server <- function(id){
   }
               )
                                 }
+=======
+  })
+}
+>>>>>>> a136aa786d9f64649fd54793aa6bd8a1a61ded22
 
 ## To be copied in the UI
 # mod_upload_ui("upload_ui_1")
