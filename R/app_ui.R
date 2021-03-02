@@ -21,6 +21,7 @@ app_ui <- function(request) {
       ),
       sidebar = bs4Dash::dashboardSidebar(
         bs4Dash::sidebarMenu(
+          bs4Dash::menuItem("Files Upload", tabName = "qc",icon = icon('file-upload')),
           bs4Dash::menuItem("Quality Control", tabName = "qc",icon = icon('hand-spock')),
           bs4Dash::menuItem("Differentially Expressed Genes", tabName = "deg",icon = icon('dna')),
           bs4Dash::menuItem("Gene Set Annotation", tabName = "gsaanno",icon = icon('random')),
