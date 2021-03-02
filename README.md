@@ -26,6 +26,8 @@
 3.  提交代码
 4.  新建 Pull Request
 
+#### 开发日志
+https://www.notion.so/eSetAnno-356b083cae6e4b87913297154de3249c
 
 #### 特技
 

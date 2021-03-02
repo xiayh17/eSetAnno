@@ -32,6 +32,7 @@ app_ui <- function(request) {
       #footer = bs4Dash::dashboardFooter(),
       body = bs4Dash::dashboardBody(
         bs4Dash::tabItems(
+          bs4Dash::tabItem(tabName = "upload",mod_upload_ui("upload_ui_1")),
           bs4Dash::tabItem(tabName = "qc",mod_qc_ui("qc_ui_1")),
           bs4Dash::tabItem(tabName = "deg",mod_deg_ui("deg_ui_1")),
           bs4Dash::tabItem(tabName = "gsaanno",mod_gsaanno_ui("gsaanno_ui_1")),
