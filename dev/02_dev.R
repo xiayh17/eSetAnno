@@ -21,6 +21,9 @@ usethis::use_package( "thinkr" )
 ## Create a module infrastructure in R/
 golem::add_module( name = "upload" ) # Name of the module
 golem::add_module( name = "qc" ) # Name of the module
+golem::add_module( name = "qc_pca" )
+golem::add_module( name = "qc_heat1000" )
+golem::add_module( name = "qc_heatcor" )
 golem::add_module( name = "deg" ) # Name of the module
 golem::add_module( name = "gsaanno" ) # Name of the module
 golem::add_module( name = "gsea" ) # Name of the module
