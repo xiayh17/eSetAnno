@@ -15,7 +15,10 @@ mod_qc_heat1000_ui <- function(id){
       column(6, sliderInput(ns("width"), "Width", min = 100, max = 1000, value = 400))
     ),
     downloadLink(ns('dlheatPlot'), 'Download plot as PDF'),
-    plotOutput(ns("heat1000"))
+    shinycustomloader::withLoader(
+      plotOutput(ns("heat1000"))
+    )
+
   )
 }
 

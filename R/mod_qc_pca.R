@@ -15,7 +15,10 @@ mod_qc_pca_ui <- function(id){
       column(6, sliderInput(ns("width"), "Width", min = 100, max = 1000, value = 400))
     ),
     downloadLink(ns('dlpcaPlot'), 'Download plot as PDF'),
-    plotOutput(ns("pca"))
+    shinycustomloader::withLoader(
+      plotOutput(ns("pca"))
+    )
+
 
   )
 }
