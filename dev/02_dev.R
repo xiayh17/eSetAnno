@@ -40,6 +40,7 @@ golem::add_module( name = "gsaanno" ) # Name of the module
 golem::add_module( name = "gsea" ) # Name of the module
 golem::add_module( name = "report" ) # Name of the module
 ## Add helper functions ----
+usethis::use_pipe()
 ## Creates ftc_* and utils_*
 golem::add_fct( "helpers" )
 golem::add_utils( "helpers" )
