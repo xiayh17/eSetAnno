@@ -10,8 +10,13 @@
 mod_qc_pca_ui <- function(id){
   ns <- NS(id)
   tagList(
-    plotOutput(ns("pca")),
-    downloadLink(ns('dlScatPlot'), 'Download plot as PDF')
+    fluidRow(
+      column(6,sliderInput(ns("height"),"Height", min = 100, max = 1000, value = 300)),
+      column(6, sliderInput(ns("width"), "Width", min = 100, max = 1000, value = 400))
+    ),
+    downloadLink(ns('dlpcaPlot'), 'Download plot as PDF'),
+    plotOutput(ns("pca"))
+
   )
 }
 
@@ -43,17 +48,20 @@ mod_qc_pca_server <- function(id){
       )
     }
 
-    output$pca <- renderPlot({
-      pcaplot()
-    })
+    output$pca <- renderPlot(width = function() input$width,
+                             height = function() input$height,
+                             res = 100,
+                             {
+                               pcaplot()
+                             })
 
-    # Create the button to download the scatterplot as PDF
-    output$dlScatPlot <- downloadHandler(
+    # Create the button to download the plot as PDF
+    output$dlpcaPlot <- downloadHandler(
       filename = function() {
         paste('pcaPlot_', Sys.Date(), '.pdf', sep='')
       },
       content = function(file) {
-        ggplot2::ggsave(file, pcaplot(), width = 11, height = 4, dpi = 300, units = "in")
+        ggplot2::ggsave(file, pcaplot(), width = input$width/100, height = input$height/100, dpi = 300, units = "in", limitsize = FALSE)
       }
     )
   })
