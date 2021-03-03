@@ -16,7 +16,7 @@ mod_qc_ui <- function(id){
       solidHeader = FALSE,
       background = NULL,
       width = NULL,
-      height = NULL,
+      height = 1300,
       side = "right",
       collapsible = TRUE,
       collapsed = FALSE,
@@ -48,7 +48,6 @@ mod_qc_ui <- function(id){
 mod_qc_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
-
   })
 }
 
