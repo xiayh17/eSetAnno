@@ -24,6 +24,7 @@ mod_deg_ui <- function(id){
       maximizable = TRUE,
       type = "tabs",
       tabPanel(
+<<<<<<< HEAD
         "Matrix",
         icon = icon("calculator"),
         mod_deg_matrix_ui("deg_matrix_ui_1")
@@ -37,6 +38,21 @@ mod_deg_ui <- function(id){
         "Heatmap",
         icon = icon("map-signs"),
         mod_deg_heat_ui("deg_heat_ui_1")
+=======
+        "Principal component analysis",
+        icon = icon("spa"),
+        mod_qc_pca_ui("qc_pca_ui_1")
+      ),
+      tabPanel(
+        "Heatmaps of the Top 1000 Genes",
+        icon = icon("autoprefixer"),
+        mod_qc_heat1000_ui("qc_heat1000_ui_1")
+      ),
+      tabPanel(
+        "Heatmaps of the Correlation Matrix",
+        icon = icon("octopus-deploy"),
+        mod_qc_heatcor_ui("qc_heatcor_ui_1")
+>>>>>>> 925a23963840062f45d65cfd77e67352da6d86d5
       )
     )
   )
