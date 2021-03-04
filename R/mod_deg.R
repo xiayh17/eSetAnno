@@ -15,8 +15,8 @@ mod_deg_ui <- function(id){
       status = "success",
       solidHeader = FALSE,
       background = NULL,
-      width = NULL,
-      height = 1300,
+      width = 12,
+      height = NULL,
       side = "right",
       collapsible = TRUE,
       collapsed = FALSE,
@@ -29,7 +29,7 @@ mod_deg_ui <- function(id){
         mod_deg_matrix_ui("deg_matrix_ui_1")
       ),
       tabPanel(
-        "Volcanol",
+        "Volcano",
         icon = icon("crosshairs"),
         mod_deg_volcanol_ui("deg_volcanol_ui_1")
       ),
