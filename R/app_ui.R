@@ -4,12 +4,30 @@
 #'     DO NOT REMOVE.
 #' @import shiny
 #' @noRd
+# dark_theme <- fresh::create_theme(
+#   fresh::bs4dash_vars(
+#     navbar_light_color = "#bec5cb",
+#     navbar_light_active_color = "#FFF",
+#     navbar_light_hover_color = "#FFF"
+#   ),
+#   fresh::bs4dash_yiq(contrasted_threshold = 255, text_dark = "#FFF", text_light = "#272c30"),
+#   fresh::bs4dash_layout(main_bg = "#353c42"),
+#   fresh::bs4dash_sidebar_dark(
+#     bg = "#272c30", color = "#bec5cb", hover_color = "#FFF",
+#     submenu_bg = "#272c30", submenu_color = "#FFF", submenu_hover_color = "#FFF"
+#   ),
+#   fresh::bs4dash_status(dark = "#272c30"),
+#   fresh::bs4dash_color(gray_900 = "#FFF", white = "#272c30")
+# )
+thematic::thematic_shiny()
 app_ui <- function(request) {
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic
     bs4Dash::dashboardPage(
+      dark = TRUE,
+      #freshTheme = dark_theme,
       title = "eSetAnno",
       header = bs4Dash::dashboardHeader(
         title = bs4Dash::dashboardBrand(
