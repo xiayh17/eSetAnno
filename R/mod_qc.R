@@ -10,19 +10,8 @@
 mod_qc_ui <- function(id){
   ns <- NS(id)
   tagList(
-    bs4Dash::bs4TabCard(
+    bs4Dash::tabsetPanel(
       id = NULL,
-      status = "success",
-      solidHeader = FALSE,
-      background = NULL,
-      width = NULL,
-      height = 1300,
-      side = "right",
-      collapsible = TRUE,
-      collapsed = FALSE,
-      closable = FALSE,
-      maximizable = TRUE,
-      type = "tabs",
       tabPanel(
         "Principal component analysis",
         icon = icon("spa"),
