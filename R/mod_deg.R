@@ -29,6 +29,11 @@ mod_deg_ui <- function(id){
         mod_deg_matrix_ui("deg_matrix_ui_1")
       ),
       tabPanel(
+        "Where to Cut",
+        icon = icon("utensils"),
+        mod_deg_wheretocut_ui("deg_wheretocut_ui_1")
+      ),
+      tabPanel(
         "Volcano",
         icon = icon("crosshairs"),
         mod_deg_volcanol_ui("deg_volcanol_ui_1")
