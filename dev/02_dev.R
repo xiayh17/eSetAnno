@@ -36,6 +36,7 @@ golem::add_module( name = "deg" ) # Name of the module
 golem::add_module( name = "deg_matrix" )
 golem::add_module( name = "deg_wheretocut" )
 golem::add_module( name = "deg_volcanol" )
+golem::add_module( name = "deg_ma" )
 golem::add_module( name = "deg_heat" )
 golem::add_module( name = "gsaanno" ) # Name of the module
 golem::add_module( name = "gsea" ) # Name of the module
