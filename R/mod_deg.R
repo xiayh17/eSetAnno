@@ -16,7 +16,7 @@ mod_deg_ui <- function(id){
       solidHeader = FALSE,
       background = NULL,
       width = 12,
-      height = NULL,
+      height = 1400,
       side = "right",
       collapsible = TRUE,
       collapsed = FALSE,
