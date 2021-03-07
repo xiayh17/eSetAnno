@@ -14,4 +14,5 @@ app_server <- function( input, output, session ) {
   mod_deg_wheretocut_server("deg_wheretocut_ui_1", deg_data=deg_data)
   mod_deg_ma_server("deg_ma_ui_1", deg_data=deg_data)
   mod_deg_volcanol_server("deg_volcanol_ui_1", deg_data=deg_data)
+  mod_deg_heat_server("deg_heat_ui_1", deg_data=deg_data)
 }
