@@ -39,6 +39,11 @@ mod_deg_ui <- function(id){
         mod_deg_volcanol_ui("deg_volcanol_ui_1")
       ),
       tabPanel(
+        "Mean-Average",
+        icon = icon("divide"),
+        mod_deg_ma_ui("deg_ma_ui_1")
+      ),
+      tabPanel(
         "Heatmap",
         icon = icon("map-signs"),
         mod_deg_heat_ui("deg_heat_ui_1")
