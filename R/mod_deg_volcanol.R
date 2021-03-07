@@ -13,8 +13,8 @@ mod_deg_volcanol_ui <- function(id){
   fluidRow(
     column(6,sliderInput(ns("pvaluecut"), "P Value for stable", min = 0.01, max = 0.05,value = 0.01, step = 0.5)),
     column(6,sliderInput(ns("logFCcut"), "logFC for up genes", min = 0.5, max = 2,value = 0.5, step = 0.5)),
-    column(6,sliderInput(ns("height"),"Height", min = 100, max = 1000, value = 874)),
-    column(6,sliderInput(ns("width"), "Width", min = 100, max = 1500, value = 1240))
+    column(6,sliderInput(ns("height"),"Height", min = 100, max = 1000, value = 400)),
+    column(6,sliderInput(ns("width"), "Width", min = 100, max = 1500, value = 800))
   ),
   downloadLink(ns('dlvolPlot'), 'Download plot as PDF'),
   plotOutput(ns("volcanoPlot")) %>% shinycustomloader::withLoader()
