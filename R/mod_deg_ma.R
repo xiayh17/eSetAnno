@@ -15,21 +15,12 @@ mod_deg_ma_ui <- function(id){
       column(6,sliderInput(ns("width"), "Width", min = 100, max = 1500, value = 800))
     ),
     downloadLink(ns('dlmaPlot'), 'Download plot as PDF'),
-<<<<<<< HEAD
     fluidRow(
       column(12,plotOutput(ns("ma")) %>% shinycustomloader::withLoader()),
       column(12,hr(),
              helpText("Explore your data with mouse"),
              ggiraph::girafeOutput(ns("plot")))
     )
-
-
-=======
-    plotOutput(ns("ma")) %>% shinycustomloader::withLoader(),
-    hr(),
-    helpText("Explore your data with mouse"),
-    ggiraph::girafeOutput(ns("plot"))
->>>>>>> d5e20a7f112309d4b75916d795acef8ebc326902
   )
 }
 
