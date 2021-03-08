@@ -9,3 +9,11 @@ x <- runif(100)
 
 plot(lb)
 #> Loading required namespace: tidyr
+
+library(microbenchmark)
+
+x <- runif(100)
+microbenchmark(
+  sqrt(x),
+  x ^ 0.5
+)
