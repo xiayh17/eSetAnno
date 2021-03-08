@@ -7,6 +7,7 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
+assignInNamespace("pheatmap", ComplexHeatmap::pheatmap, ns = "pheatmap")
 mod_deg_heat_ui <- function(id){
   ns <- NS(id)
   tagList(
@@ -71,11 +72,11 @@ mod_deg_heat_server <- function(id,deg_data=""){
       rownames(ac)=colnames(n)
       ac
     })
-
+    #assignInNamespace("pheatmap", ComplexHeatmap::pheatmap, ns = "pheatmap")
     plotheat <- function() {
       n <- n()
       ac <- ac()
-      p <- pheatmap::pheatmap(n,
+      p <- ComplexHeatmap::pheatmap(n,
                               show_colnames =input$colname,
                               show_rownames = input$rowname,
                               cluster_rows = input$clusr,
