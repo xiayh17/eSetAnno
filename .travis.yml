@@ -2,3 +2,18 @@
 
 language: R
 cache: packages
+addons:
+  apt:
+    packages:
+      - libproj-dev
+      - libgdal-dev
+
+r_packages:
+  - covr
+  - devtools
+
+r_github_packages:
+  - xiayh17/eSetAnno
+
+after_success:
+  - Rscript -e 'covr::codecov()'
