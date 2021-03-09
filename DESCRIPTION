@@ -2,10 +2,18 @@ Package: eSetAnno
 Title: An Amazing Shiny App
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "firstname",
-           family = "lastname",
+    person(given = "Yonghe",
+           family = "Xia",
            role = c("aut", "cre"),
-           email = "your@email.com")
+           email = "xiayh17@gmail.com"),
+    person(given = "Jianming",
+           family = "Zeng",
+           role = c("aut", "cre"),
+           email = "jmzeng1314@163.com"),
+    person(given = "Wei",
+           family = "Jing",
+           role = c("aut", "cre"),
+           email = "18301151828@163.com")
 Description: What the package does (one paragraph).
 License: What license is it under?
 Imports: 
@@ -28,7 +36,12 @@ Imports:
     plotly,
     shinyjs,
     dplyr,
-    tools
+    tools,
+    thinkr,
+    ComplexHeatmap,
+    EnhancedVolcano,
+    RVA,
+    thematic
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1

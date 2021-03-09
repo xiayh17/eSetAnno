@@ -36,7 +36,7 @@ usethis::use_package( "shinyjs" )
 usethis::use_package( "dplyr" )
 usethis::use_package( "tools" )
 usethis::use_package( "magrittr" )
-# usethis::use_package( "" )
+usethis::use_package( "thematic" )
 # usethis::use_package( "" )
 # usethis::use_package( "" )
 ## Add modules ----
