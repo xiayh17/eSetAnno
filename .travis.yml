@@ -8,11 +8,8 @@ addons:
       - libproj-dev
       - libgdal-dev
 
-<<<<<<< HEAD
 r_packages:
   - covr
 
-=======
->>>>>>> fbafc5f57fc46952a3126e7ccc5c00eedff12063
 after_success:
   - Rscript -e 'covr::codecov()'
