@@ -16,7 +16,6 @@
 ## Dependencies ----
 ## Add one line by package you want to add as dependency
 usethis::use_package( "thinkr" )
-usethis::use_package( "bs4Dash" )
 usethis::use_package( "FactoMineR" )
 usethis::use_package( "factoextra" )
 usethis::use_package( "ggplot2" )
@@ -24,21 +23,25 @@ usethis::use_package( "pheatmap" )
 usethis::use_package( "stats" )
 usethis::use_package( "ggpubr" )
 usethis::use_package( "shinycustomloader" )
-usethis::use_package( "ComplexHeatmap" )
 usethis::use_package( "shinyWidgets" )
-usethis::use_package( "ggiraph" )
 usethis::use_package( "DT" )
 usethis::use_package( "limma" )
-usethis::use_package( "EnhancedVolcano" )
-usethis::use_package( "RVA" )
 usethis::use_package( "plotly" )
 usethis::use_package( "shinyjs" )
 usethis::use_package( "dplyr" )
 usethis::use_package( "tools" )
 usethis::use_package( "magrittr" )
-# usethis::use_package( "" )
-# usethis::use_package( "" )
-# usethis::use_package( "" )
+usethis::use_package( "thematic" )
+usethis::use_package( "RVA")
+usethis::use_package( "ggiraph")
+usethis::use_package( "EnhancedVolcano" )
+
+usethis::use_package( "rWikiPathways" )
+usethis::use_package( "GSVAdata" )
+
+usethis::use_dev_package( "bs4Dash", remote = "https://gitee.com/xiayh17/bs4Dash" )
+usethis::use_dev_package( "ComplexHeatmap", remote = "https://gitee.com/xiayh17/ComplexHeatmap" )
+
 ## Add modules ----
 ## Create a module infrastructure in R/
 golem::add_module( name = "upload" ) # Name of the module

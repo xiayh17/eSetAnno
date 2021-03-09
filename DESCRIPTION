@@ -2,18 +2,25 @@ Package: eSetAnno
 Title: An Amazing Shiny App
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "firstname",
-           family = "lastname",
+    person(given = "Yonghe",
+           family = "Xia",
            role = c("aut", "cre"),
-           email = "your@email.com")
+           email = "xiayh17@gmail.com"),
+    person(given = "Jianming",
+           family = "Zeng",
+           role = c("aut", "cre"),
+           email = "jmzeng1314@163.com"),
+    person(given = "Wei",
+           family = "Jing",
+           role = c("aut", "cre"),
+           email = "18301151828@163.com")
 Description: What the package does (one paragraph).
 License: What license is it under?
 Imports: 
     config (>= 0.3.1),
     golem (>= 0.3.0),
     shiny (>= 1.6.0),
-    magrittr,
-    bs4Dash,
+    thinkr,
     FactoMineR,
     factoextra,
     ggplot2,
@@ -22,16 +29,28 @@ Imports:
     ggpubr,
     shinycustomloader,
     shinyWidgets,
-    ggiraph,
     DT,
     limma,
     plotly,
     shinyjs,
     dplyr,
-    tools
+    tools,
+    magrittr,
+    thematic,
+    RVA,
+    ggiraph,
+    EnhancedVolcano,
+    rWikiPathways,
+    GSVAdata,
+    bs4Dash (>= 2.0.0.9000),
+    ComplexHeatmap (>= 2.7.8.1000)
+biocViews:
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Remotes:  
+    https://gitee.com/xiayh17/bs4Dash,
+    https://gitee.com/xiayh17/ComplexHeatmap
