@@ -1,3 +1,7 @@
+<!-- badges: start -->
+  [![R-CMD-check](https://github.com/xiayh17/sSetAnno/workflows/R-CMD-check/badge.svg)](https://github.com/xiayh17/sSetAnno/actions)
+  <!-- badges: end -->
+
 # eSetAnno
 
 #### 介绍
