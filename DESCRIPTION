@@ -51,5 +51,10 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Remotes: 
+<<<<<<< HEAD
     git::git@gitee.com:xiayh17/bs4Dash.git,
     git::git@gitee.com:xiayh17/ComplexHeatmap.git
+=======
+    https://gitee.com/xiayh17/bs4Dash,
+    https://gitee.com/xiayh17/ComplexHeatmap
+>>>>>>> 971c933c5b75248aff6ba1e034e1109378bb5f69

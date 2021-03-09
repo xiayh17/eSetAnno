@@ -39,8 +39,13 @@ usethis::use_package( "EnhancedVolcano" )
 usethis::use_package( "rWikiPathways" )
 usethis::use_package( "GSVAdata" )
 
+<<<<<<< HEAD
 usethis::use_dev_package( "bs4Dash", remote = "git::git@gitee.com:xiayh17/bs4Dash.git" )
 usethis::use_dev_package( "ComplexHeatmap", remote = "git::git@gitee.com:xiayh17/ComplexHeatmap.git" )
+=======
+usethis::use_dev_package( "bs4Dash", remote = "https://gitee.com/xiayh17/bs4Dash" )
+usethis::use_dev_package( "ComplexHeatmap", remote = "https://gitee.com/xiayh17/ComplexHeatmap" )
+>>>>>>> 971c933c5b75248aff6ba1e034e1109378bb5f69
 # usethis::use_package( "" )
 # usethis::use_package( "" )
 ## Add modules ----
