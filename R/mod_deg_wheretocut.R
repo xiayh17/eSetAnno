@@ -84,6 +84,7 @@ mod_deg_wheretocut_ui <- function(id){
 }
 
 #' deg_wheretocut Server Functions
+#' @import ggplot2
 #' @importFrom ggplot2 ggsave ggplot geom_bar geom_text aes theme theme_minimal labs position_dodge element_text scale_fill_viridis_d facet_grid xlab ylab
 #' @noRd
 mod_deg_wheretocut_server <- function(id,deg_data=""){

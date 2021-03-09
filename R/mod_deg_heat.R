@@ -47,8 +47,8 @@ mod_deg_heat_ui <- function(id){
 }
 
 #' deg_heat Server Functions
-#'
-#' @noRd
+#' @importFrom utils head
+#' @importFrom utils tail
 mod_deg_heat_server <- function(id,deg_data=""){
   moduleServer( id, function(input, output, session){
     ns <- session$ns

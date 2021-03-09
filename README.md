@@ -1,3 +1,9 @@
+<!-- badges: start -->
+[![Build Status](https://travis-ci.com/xiayh17/sSetAnno.svg?branch=master)](https://travis-ci.com/xiayh17/sSetAnno)
+[![R-CMD-check](https://github.com/xiayh17/sSetAnno/workflows/R-CMD-check/badge.svg)](https://github.com/xiayh17/sSetAnno/actions)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->
+
 # eSetAnno
 
 #### 介绍
@@ -9,9 +15,33 @@
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+开始支持自动安装依赖包
+开发时clone到本地之后，在工作路径内运行
+```r
+devtools::install_local()
+```
+然后运行,应该就可以打开App页面了
+
+**开发过程中不要用这种方式运行App**
+
+```r
+eSetAnno::run_app()
+```
+
+linux环境可能缺少编译库
+
+Ubuntu/Debian等deb
+
+```shell
+sudo apt install libharfbuzz-dev libfribidi-dev
+```
+其他
+
+rpm: harfbuzz-devel fribidi-devel (Fedora, EPE）
+
+csw: libharfbuzz_dev libfribidi_dev (solaris)
+
+brew: harfbuzz fribidi (osx）
 
 #### 使用说明
 

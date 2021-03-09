@@ -26,7 +26,7 @@ mod_deg_ma_ui <- function(id){
 
 #' deg_ma Server Functions
 #' @importFrom ggplot2 ggsave ggplot geom_point aes theme theme_bw scale_y_continuous scale_colour_manual element_text geom_hline element_rect guides guide_legend labs
-#' @noRd
+
 mod_deg_ma_server <- function(id,deg_data=""){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
