@@ -1,5 +1,8 @@
 <!-- badges: start -->
+<<<<<<< HEAD
 [![Build Status](https://travis-ci.com/xiayh17/sSetAnno.svg?branch=master)](https://travis-ci.com/xiayh17/sSetAnno)
+=======
+>>>>>>> 6f742875790e935494087fbdc7ecc94072cea6fd
 [![R-CMD-check](https://github.com/xiayh17/sSetAnno/workflows/R-CMD-check/badge.svg)](https://github.com/xiayh17/sSetAnno/actions)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
