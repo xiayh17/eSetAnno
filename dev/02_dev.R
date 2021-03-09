@@ -41,6 +41,7 @@ usethis::use_package( "GSVAdata" )
 
 usethis::use_dev_package( "bs4Dash", remote = "RinteRface/bs4Dash" )
 usethis::use_dev_package( "ComplexHeatmap", remote = "jokergoo/ComplexHeatmap" )
+usethis::use_dev_package( "golem", remote = "Thinkr-open/golem" )
 # usethis::use_package( "" )
 # usethis::use_package( "" )
 ## Add modules ----

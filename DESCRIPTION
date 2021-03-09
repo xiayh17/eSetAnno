@@ -54,3 +54,4 @@ Config/testthat/edition: 3
 Remotes: 
     RinteRface/bs4Dash,
     jokergoo/ComplexHeatmap
+    Thinkr-open/golem
