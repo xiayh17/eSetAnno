@@ -25,8 +25,7 @@ mod_qc_heatcor_ui <- function(id){
 }
 
 #' qc_heatcor Server Functions
-#'
-#' @noRd
+#' @importFrom stats mad
 mod_qc_heatcor_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns

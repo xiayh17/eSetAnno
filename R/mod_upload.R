@@ -37,8 +37,7 @@ mod_upload_ui <- function(id){
 }
 
 #' upload Server Functions
-#'
-#' @noRd
+#' @importFrom graphics par boxplot
 mod_upload_server <- function(id){
   moduleServer( id, function(input, output, session){
     ns <- session$ns

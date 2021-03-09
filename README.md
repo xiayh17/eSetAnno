@@ -23,6 +23,7 @@ devtools::install_local()
 然后运行,应该就可以打开App页面了
 
 **开发过程中不要用这种方式运行App**
+
 ```r
 eSetAnno::run_app()
 ```
@@ -30,10 +31,12 @@ eSetAnno::run_app()
 linux环境可能缺少编译库
 
 Ubuntu/Debian等deb
+
 ```shell
 sudo apt install libharfbuzz-dev libfribidi-dev
 ```
 其他
+
 rpm: harfbuzz-devel fribidi-devel (Fedora, EPE）
 
 csw: libharfbuzz_dev libfribidi_dev (solaris)

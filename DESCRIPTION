@@ -14,40 +14,42 @@ Authors@R: c(    person(given = "Yonghe",
            role = c("aut"),
            email = "18301151828@163.com"))
 Description: What the package does (one paragraph).
-License: What license is it under?
+License: MIT + file LICENSE
 Imports: 
     config (>= 0.3.1),
     golem (>= 0.3.0),
     shiny (>= 1.6.0),
-    thinkr,
-    FactoMineR,
-    factoextra,
-    ggplot2,
-    pheatmap,
     stats,
+    DT,
+    limma,
+    tools,
+    magrittr,
+    ggplot2,
+    bs4Dash (>= 2.0.0.9000),
+    cluster
+biocViews:
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Suggests: 
+    pheatmap,
+    vroom,
+    plotly,
+    dplyr,
+    shinyjs,
+    ComplexHeatmap (>= 2.7.8.1000),
     ggpubr,
     shinycustomloader,
     shinyWidgets,
-    DT,
-    limma,
-    plotly,
-    shinyjs,
-    dplyr,
-    tools,
-    magrittr,
+    thinkr,
+    FactoMineR,
+    factoextra,
     thematic,
     RVA,
     ggiraph,
     EnhancedVolcano,
     rWikiPathways,
     GSVAdata,
-    bs4Dash (>= 2.0.0.9000),
-    ComplexHeatmap (>= 2.7.8.1000)
-biocViews:
-Encoding: UTF-8
-LazyData: true
-RoxygenNote: 7.1.1
-Suggests: 
     covr,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
