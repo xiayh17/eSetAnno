@@ -7,3 +7,9 @@ addons:
     packages:
       - libproj-dev
       - libgdal-dev
+
+r_packages:
+  - covr
+
+after_success:
+  - Rscript -e 'covr::codecov()'
