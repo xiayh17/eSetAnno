@@ -1,6 +1,8 @@
 <!-- badges: start -->
-  [![R-CMD-check](https://github.com/xiayh17/sSetAnno/workflows/R-CMD-check/badge.svg)](https://github.com/xiayh17/sSetAnno/actions)
-  <!-- badges: end -->
+[![Build Status](https://travis-ci.com/xiayh17/sSetAnno.svg?branch=master)](https://travis-ci.com/xiayh17/sSetAnno)
+[![R-CMD-check](https://github.com/xiayh17/sSetAnno/workflows/R-CMD-check/badge.svg)](https://github.com/xiayh17/sSetAnno/actions)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->
 
 # eSetAnno
 
