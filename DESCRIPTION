@@ -50,6 +50,6 @@ RoxygenNote: 7.1.1
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-Remotes: 
-    git::git@gitee.com:xiayh17/bs4Dash.git,
-    git::git@gitee.com:xiayh17/ComplexHeatmap.git
+Remotes:  
+    RinteRface/bs4Dash,
+    jokergoo/ComplexHeatmap
