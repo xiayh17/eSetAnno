@@ -1,19 +1,18 @@
 Package: eSetAnno
 Title: An Amazing Shiny App
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "Yonghe",
+Authors@R: c(    person(given = "Yonghe",
            family = "Xia",
            role = c("aut", "cre"),
            email = "xiayh17@gmail.com"),
     person(given = "Jianming",
            family = "Zeng",
-           role = c("aut", "cre"),
+           role = c("aut"),
            email = "jmzeng1314@163.com"),
     person(given = "Wei",
            family = "Jing",
-           role = c("aut", "cre"),
-           email = "18301151828@163.com")
+           role = c("aut"),
+           email = "18301151828@163.com"))
 Description: What the package does (one paragraph).
 License: What license is it under?
 Imports: 
@@ -51,6 +50,6 @@ RoxygenNote: 7.1.1
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-Remotes:  
-    https://gitee.com/xiayh17/bs4Dash,
-    https://gitee.com/xiayh17/ComplexHeatmap
+Remotes: 
+    git::git@gitee.com:xiayh17/bs4Dash.git,
+    git::git@gitee.com:xiayh17/ComplexHeatmap.git

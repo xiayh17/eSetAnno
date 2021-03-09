@@ -39,9 +39,10 @@ usethis::use_package( "EnhancedVolcano" )
 usethis::use_package( "rWikiPathways" )
 usethis::use_package( "GSVAdata" )
 
-usethis::use_dev_package( "bs4Dash", remote = "https://gitee.com/xiayh17/bs4Dash" )
-usethis::use_dev_package( "ComplexHeatmap", remote = "https://gitee.com/xiayh17/ComplexHeatmap" )
-
+usethis::use_dev_package( "bs4Dash", remote = "git::git@gitee.com:xiayh17/bs4Dash.git" )
+usethis::use_dev_package( "ComplexHeatmap", remote = "git::git@gitee.com:xiayh17/ComplexHeatmap.git" )
+# usethis::use_package( "" )
+# usethis::use_package( "" )
 ## Add modules ----
 ## Create a module infrastructure in R/
 golem::add_module( name = "upload" ) # Name of the module
