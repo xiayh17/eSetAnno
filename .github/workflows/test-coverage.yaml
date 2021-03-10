@@ -23,7 +23,6 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v1
 
       - name: Install XQuartz on macOS
-        if: runner.os == 'macOS'
         run: brew install xquartz --cask
 
       - name: Query dependencies
