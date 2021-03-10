@@ -54,12 +54,12 @@ mod_upload_server <- function(id){
         mode(dat)="numeric"
         limma::normalizeBetweenArrays(dat)
     }) # return the matrix after normalization
-    probes_expr <- reactive({
-      probes_expr <- matrix()
+    genes_expr <- reactive({
+      genes_expr <- matrix()
       if(input$log) {
-        log(probes_expr)
+        log(genes_expr)
       } else {
-        probes_expr
+        genes_expr
       }
     })#access the expression of assay data and do log step or not
     group_list <- reactive({
@@ -75,9 +75,9 @@ mod_upload_server <- function(id){
 
       # boxplot -----------------------------------------------------------------
       output$boxplot1 <- renderPlot({
-        probes_expr <- probes_expr()
+        genes_expr <- genes_expr()
         par(mar = c(6,2,2,2))
-        boxplot(probes_expr,las=2)
+        boxplot(genes_expr,las=2)
       })
 
 
@@ -106,18 +106,23 @@ mod_upload_server <- function(id){
       content = function(file) {
         file.copy('inst/app/www/grouplist.csv',file)
       })
-  })
-#download example group list
-  return(
-    list(
-      probes_expr = reactive({
-        probes_expr()
-      }),
-      group_list = reactive({
-        group_list()
-      })
+
+    dat <- reactive({
+
+    })
+
+    return(
+      list(
+        genes_expr = reactive({
+          genes_expr()
+        }),
+        group_list = reactive({
+          group_list()
+        })
+      )
     )
-  )
+
+  }) #download example group list
 }
 ## To be copied in the UI
 # mod_upload_ui("upload_ui_1")
