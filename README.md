@@ -1,6 +1,6 @@
 <!-- badges: start -->
-[![Build Status](https://travis-ci.com/xiayh17/sSetAnno.svg?branch=master)](https://travis-ci.com/xiayh17/sSetAnno)
 [![R-CMD-check](https://github.com/xiayh17/sSetAnno/workflows/R-CMD-check/badge.svg)](https://github.com/xiayh17/sSetAnno/actions)
+[![test-coverage](https://github.com/xiayh17/eSetAnno/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/xiayh17/eSetAnno/actions/workflows/test-coverage.yaml)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
@@ -16,9 +16,7 @@
 #### 安装教程
 
 开始支持自动安装依赖包
-
 开发时clone到本地之后，在工作路径内运行
-
 ```r
 devtools::install_local()
 ```

@@ -1,4 +1,11 @@
 comment: false
+language: R
+sudo: false
+cache: packages
+
+codecov:
+  token: cfa60eab-91f5-4e9e-8a1b-aa03034041d6
+  branch: master
 
 coverage:
   status:
@@ -12,3 +19,6 @@ coverage:
         target: auto
         threshold: 1%
         informational: true
+
+after_success:
+- Rscript -e 'covr::codecov()'
