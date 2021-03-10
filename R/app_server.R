@@ -6,8 +6,8 @@
 #' @noRd
 app_server <- function( input, output, session ) {
   # Your application server logic
-  mod_upload_server("upload_ui_1")
-  mod_qc_pca_server("qc_pca_ui_1")
+  updata <- mod_upload_server("upload_ui_1")
+  mod_qc_pca_server("qc_pca_ui_1",updata=updata)
   mod_qc_heat1000_server("qc_heat1000_ui_1")
   mod_qc_heatcor_server("qc_heatcor_ui_1")
   deg_data <- mod_deg_matrix_server("deg_matrix_ui_1")
