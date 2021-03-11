@@ -26,12 +26,21 @@ mod_qc_pca_ui <- function(id){
 #' qc_pca Server Functions
 #'
 #' @noRd
-mod_qc_pca_server <- function(id){
+mod_qc_pca_server <- function(id,updata=""){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
-    load(file = 'tests/step1-output.Rdata')
+    #load(file = 'tests/step1-output.Rdata')
+
+    dat <- reactive({
+      updata$genes_expr()
+    })
+
+    group_list <- reactive({
+      updata$group_list()
+    })
 
     t.dat <- reactive({
+      dat <- dat()
       dat=t(dat)
       as.data.frame(dat)
     })
@@ -42,6 +51,7 @@ mod_qc_pca_server <- function(id){
     })
 
     pcaplot <- function() {
+      group_list <- group_list()
       dat.pca <- dat.pca()
       factoextra::fviz_pca_ind(dat.pca,
                                geom.ind = "point", # show points only (nbut not "text")
