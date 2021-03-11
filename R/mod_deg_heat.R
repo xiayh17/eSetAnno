@@ -49,11 +49,7 @@ mod_deg_heat_ui <- function(id){
 #' deg_heat Server Functions
 #' @importFrom utils head
 #' @importFrom utils tail
-<<<<<<< HEAD
 mod_deg_heat_server <- function(id,deg_data="",updata=""){
-=======
-mod_deg_heat_server <- function(id,deg_data=""){
->>>>>>> 917fc4b932ceb47c93f648911007f3cea1681e28
   moduleServer( id, function(input, output, session){
     ns <- session$ns
     #load(file = 'tests/step1-output.Rdata')
