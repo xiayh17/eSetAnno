@@ -26,20 +26,30 @@ mod_qc_heatcor_ui <- function(id){
 
 #' qc_heatcor Server Functions
 #' @importFrom stats mad
-mod_qc_heatcor_server <- function(id){
+mod_qc_heatcor_server <- function(id,updata=""){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
-    load(file = 'tests/step1-output.Rdata')
+    #load(file = 'tests/step1-output.Rdata')
 
-    exprSet=dat
+    exprSet <- reactive({
+      updata$genes_expr()
+    })
+
+    group_list <- reactive({
+      updata$group_list()
+    })
+
 
     colD <- reactive({
+      exprSet <- exprSet()
+      group_list <- group_list()
       colD=data.frame(group=group_list)
       rownames(colD)=colnames(exprSet)
       colD
     })
 
     M <- reactive({
+      exprSet <- exprSet()
       exprSet=exprSet[names(sort(apply(exprSet, 1,mad),decreasing = T)[1:500]),]
       stats::cor(exprSet)
     })

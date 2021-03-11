@@ -25,13 +25,21 @@ mod_qc_heat1000_ui <- function(id){
 #' qc_heat1000 Server Functions
 #' @importFrom utils head tail
 #' @importFrom stats sd
-mod_qc_heat1000_server <- function(id){
+mod_qc_heat1000_server <- function(id,updata=""){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
 
-    load(file = 'tests/step1-output.Rdata')
+    # load(file = 'tests/step1-output.Rdata')
+    dat <- reactive({
+      updata$genes_expr()
+    })
+
+    group_list <- reactive({
+      updata$group_list()
+    })
 
     n <- reactive({
+      dat <- dat()
       cg=names(tail(sort(apply(dat,1,sd)),1000))
       n=t(scale(t(dat[cg,]))) # 'scale'可以对log-ratio数值进行归一化
       n[n>2]=2
@@ -41,6 +49,7 @@ mod_qc_heat1000_server <- function(id){
 
     ac <- reactive({
       n <- n()
+      group_list <- group_list()
       ac <- data.frame(group=group_list)
       rownames(ac)=colnames(n)
       ac

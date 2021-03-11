@@ -29,18 +29,27 @@ mod_deg_matrix_ui <- function(id){
 #' deg_matrix Server Functions
 #'
 #' @noRd
-mod_deg_matrix_server <- function(id){
+mod_deg_matrix_server <- function(id,updata=""){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
-    load(file = 'tests/step1-output.Rdata')
+    #load(file = 'tests/step1-output.Rdata')
+    dat <- reactive({
+      updata$genes_expr()
+    })
+
+    group_list <- reactive({
+      updata$group_list()
+    })
 
     options(digits = 4)
 
     design <- reactive({
+      group_list <- group_list()
       stats::model.matrix(~factor( group_list ))
     })
 
     fit <- reactive({
+      dat <- dat()
       design <- design()
       fit <- limma::lmFit(dat,design)
       limma::eBayes(fit)

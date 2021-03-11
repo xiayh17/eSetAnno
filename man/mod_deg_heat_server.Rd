@@ -4,7 +4,7 @@
 \alias{mod_deg_heat_server}
 \title{deg_heat Server Functions}
 \usage{
-mod_deg_heat_server(id, deg_data = "")
+mod_deg_heat_server(id, deg_data = "", updata = "")
 }
 \description{
 deg_heat Server Functions

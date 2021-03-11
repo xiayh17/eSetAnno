@@ -49,12 +49,21 @@ mod_deg_heat_ui <- function(id){
 #' deg_heat Server Functions
 #' @importFrom utils head
 #' @importFrom utils tail
-mod_deg_heat_server <- function(id,deg_data=""){
+mod_deg_heat_server <- function(id,deg_data="",updata=""){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
-    load(file = 'tests/step1-output.Rdata')
+    #load(file = 'tests/step1-output.Rdata')
+
+    dat <- reactive({
+      updata$genes_expr()
+    })
+
+    group_list <- reactive({
+      updata$group_list()
+    })
 
     n <- reactive({
+      dat <- dat()
       deg <- deg_data$deg()
       x=deg$logFC
       names(x)=rownames(deg)
@@ -68,6 +77,7 @@ mod_deg_heat_server <- function(id,deg_data=""){
 
     ac <- reactive({
       n <- n()
+      group_list <- group_list()
       ac <- data.frame(group=group_list)
       rownames(ac)=colnames(n)
       ac

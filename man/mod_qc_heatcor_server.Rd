@@ -4,7 +4,7 @@
 \alias{mod_qc_heatcor_server}
 \title{qc_heatcor Server Functions}
 \usage{
-mod_qc_heatcor_server(id)
+mod_qc_heatcor_server(id, updata = "")
 }
 \description{
 qc_heatcor Server Functions
