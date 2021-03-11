@@ -50,7 +50,6 @@ mod_upload_server <- function(id){
         dat=as.matrix(vroom::vroom(file$datapath))
         rownames(dat)=dat[,1]
         dat=dat[,-1]
-        dat[1:4,1:4]
         mode(dat)="numeric"
         limma::normalizeBetweenArrays(dat)
     }) # return the matrix after normalization
@@ -68,8 +67,14 @@ mod_upload_server <- function(id){
       req(file)
       #if the file format is not .csv,then put the hint line:Please upload your matrix in csv format file
       validate(need(ext == "csv", "Please upload your matrix in csv format file"))
-      group_list=vroom::vroom(file$datapath)
-      group_list[,-1]
+      group_list=vroom::vroom(file$datapath,delim = ",")
+      n_index <- data.frame(
+        ID = colnames(matrix()),
+        inx = 1:ncol(matrix())
+      )
+      group_list <- merge(n_index,group_list,by="ID")
+      group_list <- group_list[order(group_list$inx),]
+      group_list[,-2]
     })
 
 
@@ -83,7 +88,7 @@ mod_upload_server <- function(id){
 
     output$preview1 <- DT::renderDataTable({
       DT::datatable( group_list(),
-                     rownames = TRUE,
+                     rownames = FALSE,
                      extensions = 'Buttons',
                      options=list(
                        dom = 'Bfrtip',
@@ -96,6 +101,18 @@ mod_upload_server <- function(id){
                      )
       )
     })
+
+    # load(file = 'tests/step1-output.Rdata')
+    #
+    # dd <- data.frame(
+    #   ID = colnames(dat),
+    #   group = group_list
+    # )
+    #
+    # write.csv(dat,file = "inst/app/www/matrix.csv")
+    # write.csv(dd,file = "inst/app/www/grouplist.csv", row.names = FALSE)
+
+
     output$matrix <- downloadHandler(
       filename = 'matrix.csv',
       content = function(file) {
@@ -107,7 +124,9 @@ mod_upload_server <- function(id){
         file.copy('inst/app/www/grouplist.csv',file)
       })
 
-    dat <- reactive({
+    group_list2 <- reactive({
+      group_list <- group_list()
+      group_list[,2]
 
     })
 
@@ -117,7 +136,7 @@ mod_upload_server <- function(id){
           genes_expr()
         }),
         group_list = reactive({
-          group_list()
+          group_list2()
         })
       )
     )
