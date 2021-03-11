@@ -26,7 +26,11 @@ mod_qc_heatcor_ui <- function(id){
 
 #' qc_heatcor Server Functions
 #' @importFrom stats mad
+<<<<<<< HEAD
 mod_qc_heatcor_server <- function(id,updata=""){
+=======
+mod_qc_heatcor_server <- function(id){
+>>>>>>> 917fc4b932ceb47c93f648911007f3cea1681e28
   moduleServer( id, function(input, output, session){
     ns <- session$ns
     #load(file = 'tests/step1-output.Rdata')

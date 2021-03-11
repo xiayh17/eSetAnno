@@ -25,7 +25,11 @@ mod_qc_heat1000_ui <- function(id){
 #' qc_heat1000 Server Functions
 #' @importFrom utils head tail
 #' @importFrom stats sd
+<<<<<<< HEAD
 mod_qc_heat1000_server <- function(id,updata=""){
+=======
+mod_qc_heat1000_server <- function(id){
+>>>>>>> 917fc4b932ceb47c93f648911007f3cea1681e28
   moduleServer( id, function(input, output, session){
     ns <- session$ns
 

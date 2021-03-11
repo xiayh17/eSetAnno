@@ -52,12 +52,17 @@ mod_upload_server <- function(id){
         rownames(dat)=dat[,1]
         dat=dat[,-1]
         mode(dat)="numeric"
+<<<<<<< HEAD
         if(input$normarry) {
           limma::normalizeBetweenArrays(dat)
         } else {
           dat
         }
     }) # return the matrix if normalization
+=======
+        limma::normalizeBetweenArrays(dat)
+    }) # return the matrix after normalization
+>>>>>>> 917fc4b932ceb47c93f648911007f3cea1681e28
     genes_expr <- reactive({
       genes_expr <- matrix()
       if(input$log) {
@@ -129,9 +134,13 @@ mod_upload_server <- function(id){
         file.copy('inst/app/www/grouplist.csv',file)
       })
 
+<<<<<<< HEAD
     group_list2 <- reactive({
       group_list <- group_list()
       group_list[,2]
+=======
+    dat <- reactive({
+>>>>>>> 917fc4b932ceb47c93f648911007f3cea1681e28
 
     })
 
@@ -141,7 +150,11 @@ mod_upload_server <- function(id){
           genes_expr()
         }),
         group_list = reactive({
+<<<<<<< HEAD
           group_list2()
+=======
+          group_list()
+>>>>>>> 917fc4b932ceb47c93f648911007f3cea1681e28
         })
       )
     )
