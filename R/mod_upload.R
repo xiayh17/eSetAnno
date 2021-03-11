@@ -20,6 +20,7 @@ mod_upload_ui <- function(id){
       downloadLink(ns("matrix"),"example matrix file"),
       fileInput(ns("matrix_csv"), "Upload your file ONLY IN csv format", accept = ".csv"),
       checkboxInput(ns("log"), "log gene expression",value = FALSE),
+      checkboxInput(ns("normarry"), "normalizeBetweenArrays",value = FALSE),
       shinycustomloader::withLoader(plotOutput(ns("boxplot1")))
     ),
     bs4Dash::bs4Card(
@@ -51,8 +52,12 @@ mod_upload_server <- function(id){
         rownames(dat)=dat[,1]
         dat=dat[,-1]
         mode(dat)="numeric"
-        limma::normalizeBetweenArrays(dat)
-    }) # return the matrix after normalization
+        if(input$normarry) {
+          limma::normalizeBetweenArrays(dat)
+        } else {
+          dat
+        }
+    }) # return the matrix if normalization
     genes_expr <- reactive({
       genes_expr <- matrix()
       if(input$log) {
